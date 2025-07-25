@@ -30,14 +30,10 @@ body {
 header {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
-    padding: 60px 0;
+    padding: 0px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-header h1:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-    cursor: default;
 }
 
 /* Default QR code styles */
@@ -54,26 +50,7 @@ header h1:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* Header styles */
-header {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-/* QR code container */
-.qr-code {
-    position: absolute;
-    top: 10px;
-    right: -10px; /* Pushes QR 10px outside */
-    text-align: center;
-    color: white;
-    font-size: 14px;
-}
-
+ 
 /* Responsive adjustments for mobile */
 @media (max-width: 600px) {
     header {
