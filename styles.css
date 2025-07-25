@@ -1091,7 +1091,164 @@ body {
 
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb;
+}
+
+.main-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.sponsor-banner {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.sponsor-banner span {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.8);
+}
+
+.sponsor-logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.event-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title-main {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.title-tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+.organizers {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.organizer-container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.organizer-container > span {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.8);
+}
+
+.organizer-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.organizer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.organizer i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-main {
+        font-size: 2rem;
+    }
+    
+    .title-tagline {
+        font-size: 1.3rem;
+    }
+    
+    .organizer-logos {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 3rem 1.5rem;
+    }
+    
+    .title-main {
+        font-size: 1.7rem;
+    }
+    
+    .title-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .sponsor-logo {
+        font-size: 1.5rem;
+    }
+    
+    .organizer {
+        font-size: 1rem;
+    }
+}
 
 
 
