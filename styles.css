@@ -2068,3 +2068,73 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.vertical-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-buttons .nav-btn {
+  padding: 10px 15px;
+  background-color: #3a0ca3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vertical-buttons .nav-btn:hover {
+  background-color: #5f37d1;
+}
+
+.page-section {
+  height: 600px;
+  padding: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
