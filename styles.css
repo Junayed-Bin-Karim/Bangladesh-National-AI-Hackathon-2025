@@ -1267,3 +1267,466 @@ body {
 .btn:hover {
     background-color: #0056b3;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================
+   IMPORTANT NOTICE SECTION
+   Clean, modern and responsive warning block
+   ============================================= */
+
+/**
+ * Base Styles
+ */
+.important-notice {
+  /* Layout */
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  box-sizing: border-box;
+
+  /* Visual Design */
+  background-color: #8a3342;
+  color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  
+  /* Typography */
+  font-family: 'Inter', 'Segoe UI', 'Lato', system-ui, -apple-system, 
+               BlinkMacSystemFont, sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  
+  /* Animation */
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/**
+ * Notice Icon
+ */
+.important-notice__icon {
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/**
+ * Notice Heading
+ */
+.important-notice__heading {
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem); /* 24-28px responsive */
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+/**
+ * Notice Content
+ */
+.important-notice__content {
+  font-size: clamp(1rem, 1.25vw, 1.125rem); /* 16-18px responsive */
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  opacity: 0.95;
+}
+
+/**
+ * Interactive States
+ */
+.important-notice:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  transform: translateY(-2px);
+}
+
+.important-notice:focus-within {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 3px;
+}
+
+/**
+ * Responsive Adjustments
+ */
+@media (max-width: 992px) {
+  .important-notice {
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .important-notice {
+    padding: 1.75rem;
+    border-radius: 12px;
+  }
+  
+  .important-notice__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .important-notice {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .important-notice__heading {
+    margin-bottom: 1rem;
+  }
+  
+  .important-notice__content {
+    line-height: 1.5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Base Styles */
+:root {
+  
+    --secondary: #f72585;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --success: #4cc9f0;
+    --warning: #f8961e;
+    --danger: #ef233c;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Problem Statements Section */
+.problem-statements {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+/* Statements Grid */
+.statements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.statement-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.statement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.statement-header {
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+}
+
+.statement-header h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.statement-content {
+    padding: 20px;
+}
+
+.statement-content p {
+    margin-bottom: 15px;
+    color: var(--gray);
+}
+
+.toggle-details {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+.toggle-details:hover {
+    color: var(--primary-dark);
+}
+
+.toggle-details i {
+    transition: var(--transition);
+}
+
+.statement-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.statement-details.active {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
+.statement-details ul {
+    padding-left: 20px;
+    color: var(--gray);
+}
+
+.statement-details li {
+    margin-bottom: 8px;
+}
+
+/* Submit Button */
+.cta-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--secondary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(247, 37, 133, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #d91a6d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 37, 133, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .problem-statements {
+        padding: 60px 0;
+    }
+    
+    .statements-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-description {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .problem-statements {
+        padding: 40px 0;
+    }
+    
+    .statement-header {
+        padding: 15px;
+    }
+    
+    .statement-content {
+        padding: 15px;
+    }
+    
+    .submit-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+/* Download Area - CSS Only */
+.download-area {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px auto;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  max-width: 600px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.release-date {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.download-button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.download-button:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .download-area {
+    padding: 20px;
+    margin: 24px 0;
+    border-radius: 8px;
+  }
+  
+  .release-date {
+    font-size: 0.95rem;
+  }
+  
+  .download-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Submit Button Styles */
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ec4899;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(236, 72, 153, 0.2);
+}
+
+.submit-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.submit-button:not(:disabled):hover {
+    background-color: #db2777;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(236, 72, 153, 0.3);
+}
+
+/* If you need to maintain the link functionality when enabled */
+.submit-button.enabled {
+    background-color: #ec4899;
+    cursor: pointer;
+}
+
+.submit-button.enabled:hover {
+    background-color: #db2777;
+}

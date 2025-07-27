@@ -98,3 +98,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Enable submit button
+    const submitButton = document.querySelector('.submit-button');
+    submitButton.disabled = false;
+    submitButton.classList.add('enabled');
+    submitButton.onclick = function() {
+        window.open('https://forms.gle/bZp4E86FJKPbZnep8', '_blank');
+    };
+
+    // Enable download button
+    const downloadButton = document.querySelector('.download-button');
+    downloadButton.disabled = false;
+    downloadButton.classList.add('enabled');
+    downloadButton.onclick = function() {
+    const pdfUrl = 'Official Rulebook.pdf';
+        window.open(pdfUrl, '_blank');
+    };
+});
+
