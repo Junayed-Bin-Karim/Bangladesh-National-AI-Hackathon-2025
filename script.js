@@ -116,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+submitButton.disabled = false;
+downloadButton.disabled = false;
 
 document.addEventListener('DOMContentLoaded', function() {
     // Enable submit button
@@ -135,4 +137,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(pdfUrl, '_blank');
     };
 });
+
+
+
+
+
+
+
 
