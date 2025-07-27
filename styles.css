@@ -1733,6 +1733,13 @@ body {
 
 
 
+.organizer-logo {
+    max-height: 40px;
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
 
 
 
