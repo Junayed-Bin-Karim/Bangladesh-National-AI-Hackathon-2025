@@ -105,6 +105,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+  
+  // Close menu when a link is clicked (optional)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.classList.remove('active');
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,6 +165,18 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(pdfUrl, '_blank');
     };
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
