@@ -143,32 +143,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const submitButton = document.querySelector('.submit-button');
+  const downloadButton = document.querySelector('.download-button');
 
-submitButton.disabled = false;
-downloadButton.disabled = false;
+  // Target release date: August 15, 2025 (Year, MonthIndex(0-based), Day)
+  const releaseDate = new Date(2025, 7, 15); // August is month 7 in JS Date (0-based)
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Enable submit button
-    const submitButton = document.querySelector('.submit-button');
+  // Current date and time
+  const now = new Date();
+
+  if (now >= releaseDate) {
+    // Enable buttons
     submitButton.disabled = false;
     submitButton.classList.add('enabled');
-    submitButton.onclick = function() {
-        window.open('https://forms.gle/bZp4E86FJKPbZnep8', '_blank');
+    submitButton.onclick = function () {
+      window.open('https://forms.gle/bZp4E86FJKPbZnep8', '_blank');
     };
-
-    // Enable download button
-    const downloadButton = document.querySelector('.download-button');
+ 
     downloadButton.disabled = false;
     downloadButton.classList.add('enabled');
-    downloadButton.onclick = function() {
-    const pdfUrl = 'Official Rulebook.pdf';
-        window.open(pdfUrl, '_blank');
+    downloadButton.onclick = function () {
+      const pdfUrl = 'Problem Statement.pdf';
+      window.open(pdfUrl, '_blank');
     };
-});
-
-
-
-
+  }
+}); 
 
 
 
